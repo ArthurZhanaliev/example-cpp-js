@@ -1,0 +1,17 @@
+{
+  "name": "example-cpp-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cmake-js compile"
+  },
+  "author": "Arthur Zhanaliev",
+  "license": "ISC",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "cmake-js": "^6.1.0",
+    "node-addon-api": "^3.0.2"
+  }
+}

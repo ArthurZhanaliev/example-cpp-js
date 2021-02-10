@@ -34,11 +34,11 @@ target_include_directories(
 )
 
 
-if("${CMAKE_C_COMPILER_ID}" STREQUAL "MSVC" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+if(("${CMAKE_C_COMPILER_ID}" STREQUAL "MSVC") OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC"))
 
     target_compile_options(${PROJECT_NAME} PRIVATE /W4 /Ox /volatile:iso /utf-8)
 
-elseif("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+elseif(("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU"))
 
     target_link_libraries(${PROJECT_NAME} PUBLIC pthread)
     target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic -O3 -lc++fs)
